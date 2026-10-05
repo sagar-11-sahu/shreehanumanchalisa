@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://shreehanumanchalisa.me/</loc>
-        <lastmod>2026-10-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://shreehanumanchalisa.me/hanuman-chalisa-meaning.html</loc>
-        <lastmod>2026-10-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://shreehanumanchalisa.me/hanuman-chalisa-in-english.html</loc>
-        <lastmod>2026-10-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-    <loc>https://shreehanumanchalisa.me/hanuman-chalisa-pdf.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    </url>
-
+<url><loc>https://shreehanumanchalisa.me/</loc><lastmod>2026-10-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-meaning.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-in-english.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-pdf.html</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-lyrics.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-40-chaupai.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-benefits.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://shreehanumanchalisa.me/hanuman-chalisa-path-vidhi.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://shreehanumanchalisa.me/about-hanuman-chalisa.html</loc><lastmod>2026-10-05</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
 </urlset>
