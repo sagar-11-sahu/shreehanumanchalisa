@@ -1,9 +1,7 @@
-/* =========================================================
-   SHREE HANUMAN CHALISA WEBSITE
-   Main stylesheet for all pages
-   ========================================================= */
-
-/* ---------- RESET ---------- */
+/* =====================================================
+   SHREE HANUMAN CHALISA - UNIVERSAL CSS
+   Works with OLD + NEW pages
+   ===================================================== */
 
 * {
     box-sizing: border-box;
@@ -22,11 +20,6 @@ body {
     background: #fffaf3;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 a {
     color: #8b1e16;
     text-decoration: none;
@@ -37,7 +30,9 @@ a:hover {
 }
 
 
-/* ---------- COMMON CONTAINER ---------- */
+/* =========================
+   CONTAINER
+   ========================= */
 
 .container {
     width: 100%;
@@ -48,18 +43,30 @@ a:hover {
 }
 
 
-/* ---------- HEADER ---------- */
+/* =========================
+   HEADER
+   Supports OLD + NEW pages
+   ========================= */
 
+header,
 .site-header {
     background: linear-gradient(135deg, #8b1e16, #b73520);
-    color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+header {
+    padding: 0;
+}
+
+.site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.site-header .container {
+.site-header .container,
+header > .container {
     min-height: 70px;
     display: flex;
     align-items: center;
@@ -67,54 +74,86 @@ a:hover {
     gap: 20px;
 }
 
+
+/* =========================
+   BRAND
+   ========================= */
+
 .brand {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: white;
     font-size: 21px;
-    font-weight: 700;
+    font-weight: bold;
     white-space: nowrap;
 }
 
-.brand:first-letter {
-    font-size: 25px;
-}
 
+/* =========================
+   NAVIGATION
+   ========================= */
 
-/* ---------- NAVIGATION ---------- */
+header nav,
+.site-header nav {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 12px 20px;
 
-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 6px;
     flex-wrap: wrap;
+    gap: 6px;
 }
 
-nav a {
-    color: #ffffff;
+header nav a,
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
     padding: 8px 11px;
     border-radius: 7px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s ease;
 }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.18);
+header nav a:hover,
+.site-header nav a:hover {
+    background: rgba(255,255,255,.18);
     text-decoration: none;
 }
 
 
-/* ---------- HERO ---------- */
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
     text-align: center;
-    padding: 55px 0 45px;
-    background:
-        radial-gradient(circle at top, #fff3d6 0%, #fffaf3 55%);
+    padding: 55px 20px 45px;
+    background: radial-gradient(
+        circle at top,
+        #fff3d6 0%,
+        #fffaf3 65%
+    );
     border-bottom: 1px solid #f0dfc5;
+}
+
+.hero .container {
+    max-width: 900px;
 }
 
 .om {
@@ -124,64 +163,35 @@ nav a:hover {
     color: #a32618;
 }
 
-.hero h1 {
-    margin: 0;
+.hero h1,
+h1 {
     color: #7c1711;
-    font-size: 38px;
     line-height: 1.3;
 }
 
+.hero h1 {
+    font-size: clamp(30px, 5vw, 44px);
+    margin: 0 0 10px;
+}
+
 .hero-subtitle {
-    margin: 8px 0 14px;
     font-size: 20px;
     color: #555;
-    font-weight: 600;
+    margin: 5px 0 15px;
 }
 
 .intro {
-    max-width: 760px;
-    margin: 0 auto 25px;
-    font-size: 17px;
+    max-width: 850px;
+    margin: 0 auto 20px;
 }
 
 
-/* ---------- QUICK LINKS ---------- */
-
-.quick-links {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
-}
-
-.quick-links a {
-    display: inline-block;
-    padding: 10px 16px;
-    border-radius: 9px;
-    background: #8b1e16;
-    color: #ffffff;
-    font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.quick-links a:hover {
-    background: #6f160f;
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-
-/* ---------- MAIN CONTENT ---------- */
-
-main {
-    width: 100%;
-}
+/* =========================
+   CONTENT SECTIONS
+   ========================= */
 
 .content-section {
-    padding: 48px 0;
+    padding: 45px 0;
     background: #fffaf3;
 }
 
@@ -189,137 +199,211 @@ main {
     background: #fff3e3;
 }
 
-.content-section .container {
-    background: transparent;
+
+/* =========================
+   NEW PAGE SECTIONS
+   ========================= */
+
+main > section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section:not(.hero) {
+    max-width: 900px;
+}
+
+main > section.intro,
+main > section.toc,
+main > section#lyrics,
+main > section#meaning,
+main > section#about {
+    background: #ffffff;
+    border: 1px solid #ead8bd;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 9px rgba(80,40,10,.06);
 }
 
 
-/* ---------- HEADINGS ---------- */
-
-h1,
-h2,
-h3,
-h4 {
-    color: #7c1711;
-}
+/* =========================
+   HEADINGS
+   ========================= */
 
 h2 {
-    margin-top: 0;
-    margin-bottom: 24px;
+    color: #7c1711;
     font-size: 29px;
-    line-height: 1.35;
-    border-bottom: 2px solid #e7c99d;
-    padding-bottom: 10px;
+    line-height: 1.4;
+    margin-top: 25px;
+    margin-bottom: 18px;
 }
 
 h3 {
-    margin-top: 28px;
-    margin-bottom: 8px;
+    color: #7c1711;
     font-size: 21px;
-    line-height: 1.45;
+    margin-top: 25px;
 }
 
-h4 {
+h2:first-child,
+h3:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================
+   QUICK LINKS
+   ========================= */
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.quick-links a {
+    background: #8b1e16;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.quick-links a:hover {
+    background: #6f160f;
+    text-decoration: none;
+}
+
+
+/* =========================
+   VERSES
+   ========================= */
+
+.verse {
+    background: #fffaf3;
+    border: 1px solid #ead8bd;
+    border-left: 5px solid #8b1e16;
+    border-radius: 10px;
+
+    padding: 17px 20px;
+    margin: 15px 0;
+
+    line-height: 1.9;
     font-size: 18px;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 17px;
+.verse strong {
+    color: #7c1711;
 }
 
 
-/* ---------- GENERAL CONTENT BOX ---------- */
+/* =========================
+   MEANING
+   ========================= */
+
+.meaning {
+    background: #fff4df;
+    border: 1px solid #ead8bd;
+    border-radius: 10px;
+
+    padding: 17px 20px;
+    margin: 15px 0;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   TOC
+   ========================= */
+
+.toc {
+    background: #fff1dc !important;
+}
+
+.toc ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.toc li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn,
+.button,
+.back,
+.download-button {
+    display: inline-block;
+
+    background: #8b1e16;
+    color: white;
+
+    padding: 11px 18px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    margin: 5px;
+}
+
+.btn:hover,
+.button:hover,
+.back:hover,
+.download-button:hover {
+    background: #6f160f;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =========================
+   BOXES
+   ========================= */
 
 .box,
 .content-box,
 .info-box,
-.meaning-note,
-.note {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px 22px;
-    margin: 20px 0;
+.note,
+.meaning-note {
+    background: white;
     border: 1px solid #ead8bd;
-    box-shadow: 0 2px 9px rgba(80, 40, 10, 0.07);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(80,40,10,.06);
 }
 
 .note,
 .meaning-note {
-    background: #fff5df;
-    border-left: 5px solid #a32618;
+    background: #fff4df;
+    border-left: 5px solid #8b1e16;
 }
 
 
-/* ---------- CHALISA TEXT ---------- */
-
-.chalisa,
-.chalisa-text {
-    background: #ffffff;
-    border: 1px solid #ead8bd;
-    border-radius: 12px;
-    padding: 25px;
-    margin: 20px 0;
-    box-shadow: 0 2px 9px rgba(80, 40, 10, 0.06);
-}
-
-.chalisa p,
-.chalisa-text p {
-    margin-bottom: 16px;
-    font-size: 18px;
-    line-height: 2;
-}
-
-
-/* ---------- ROMAN / ENGLISH TEXT ---------- */
-
-.roman,
-.roman-text,
-.english-text {
-    line-height: 1.9;
-}
-
-.roman p,
-.roman-text p {
-    margin-bottom: 15px;
-}
-
-
-/* ---------- VERSE / CHOUPAI BOXES ---------- */
-
-.verse,
-.chaupai,
-.chaupai-box {
-    background: #ffffff;
-    border: 1px solid #ead8bd;
-    border-radius: 10px;
-    padding: 16px 19px;
-    margin: 13px 0;
-    box-shadow: 0 1px 5px rgba(80, 40, 10, 0.05);
-}
-
-.verse strong,
-.chaupai strong,
-.chaupai-box strong {
-    color: #8b1e16;
-}
-
-
-/* ---------- FAQ ---------- */
+/* =========================
+   FAQ
+   ========================= */
 
 .faq-item {
-    background: #ffffff;
+    background: white;
     border: 1px solid #ead8bd;
     border-radius: 10px;
-    padding: 18px 21px;
+    padding: 18px 20px;
     margin: 14px 0;
-    box-shadow: 0 2px 7px rgba(80, 40, 10, 0.05);
 }
 
 .faq-item h3 {
     margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 19px;
 }
 
 .faq-item p {
@@ -327,114 +411,50 @@ p {
 }
 
 
-/* ---------- NEW SEO PAGES ---------- */
+/* =========================
+   LISTS
+   ========================= */
 
-.page-content {
-    max-width: 900px;
-    margin: 0 auto;
+ul,
+ol {
+    line-height: 1.8;
 }
 
-.page-title {
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer,
+.site-footer {
+    background: #32110e;
+    color: white;
     text-align: center;
-    margin-bottom: 30px;
+    padding: 30px 20px;
+    margin-top: 40px;
 }
 
-.page-title h1 {
-    font-size: 34px;
-    margin-bottom: 8px;
-}
-
-.page-title p {
-    color: #666;
-    font-size: 17px;
+footer a,
+.site-footer a {
+    color: #ffe0a6;
 }
 
 
-/* ---------- ARTICLE SECTIONS ---------- */
-
-article {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-article section {
-    margin-bottom: 30px;
-}
-
-article h2 {
-    margin-top: 35px;
-}
-
-article ul,
-article ol {
-    padding-left: 25px;
-}
-
-article li {
-    margin-bottom: 8px;
-}
-
-
-/* ---------- CARDS ---------- */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin: 25px 0;
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid #ead8bd;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(80, 40, 10, 0.06);
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-
-/* ---------- BUTTONS ---------- */
-
-.button,
-.btn,
-.download-button {
-    display: inline-block;
-    padding: 11px 18px;
-    border-radius: 8px;
-    background: #8b1e16;
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    margin: 5px 5px 5px 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-}
-
-.button:hover,
-.btn:hover,
-.download-button:hover {
-    background: #6f160f;
-    text-decoration: none;
-}
-
-
-/* ---------- TABLES ---------- */
+/* =========================
+   TABLE
+   ========================= */
 
 table {
     width: 100%;
     border-collapse: collapse;
+    background: white;
     margin: 20px 0;
-    background: #ffffff;
 }
 
 th,
 td {
     border: 1px solid #dfc9a9;
-    padding: 11px 13px;
-    text-align: left;
+    padding: 10px 12px;
 }
 
 th {
@@ -443,172 +463,94 @@ th {
 }
 
 
-/* ---------- HORIZONTAL RULE ---------- */
+/* =========================
+   MOBILE
+   ========================= */
 
-hr {
-    border: 0;
-    border-top: 1px solid #ead8bd;
-    margin: 30px 0;
-}
-
-
-/* ---------- FOOTER ---------- */
-
-footer {
-    background: #32110e;
-    color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #ffe0a6;
-}
-
-.site-footer {
-    background: #32110e;
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-
-/* ---------- PDF PAGE ---------- */
-
-.pdf-container {
-    max-width: 850px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.pdf-actions {
-    text-align: center;
-    margin: 25px 0;
-}
-
-
-/* ---------- LISTS ---------- */
-
-ul,
-ol {
-    line-height: 1.8;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 800px) {
-
-    .site-header .container {
-        flex-direction: column;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        gap: 8px;
-    }
-
-    .brand {
-        font-size: 19px;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-
-    .hero {
-        padding: 40px 0 35px;
-    }
-
-    .hero h1 {
-        font-size: 31px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .intro {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 25px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* ---------- SMALL MOBILE ---------- */
-
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 
     .container {
         padding-left: 14px;
         padding-right: 14px;
     }
 
-    .om {
-        font-size: 44px;
+    .site-header .container,
+    header > .container {
+        flex-direction: column;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    header nav,
+    .site-header nav {
+        justify-content: center;
+        padding: 8px 10px;
+    }
+
+    header nav a,
+    .site-header nav a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding: 40px 12px 35px;
     }
 
     .hero h1 {
-        font-size: 27px;
+        font-size: 30px;
     }
 
-    .hero-subtitle {
+    h2 {
+        font-size: 25px;
+    }
+
+    main > section.intro,
+    main > section.toc,
+    main > section#lyrics,
+    main > section#meaning,
+    main > section#about {
+        padding: 18px;
+    }
+
+    .verse {
         font-size: 16px;
+        padding: 15px;
     }
 
     .quick-links {
         flex-direction: column;
-        align-items: stretch;
     }
 
     .quick-links a {
         text-align: center;
     }
+}
 
-    .content-section {
-        padding: 34px 0;
+
+/* =========================
+   VERY SMALL SCREENS
+   ========================= */
+
+@media (max-width: 450px) {
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
     }
 
     h2 {
-        font-size: 23px;
-    }
-
-    h3 {
-        font-size: 19px;
-    }
-
-    .chalisa,
-    .chalisa-text,
-    .box,
-    .content-box,
-    .info-box,
-    .meaning-note,
-    .note {
-        padding: 17px;
-    }
-
-    .chalisa p,
-    .chalisa-text p {
-        font-size: 17px;
-        line-height: 1.9;
+        font-size: 22px;
     }
 }
