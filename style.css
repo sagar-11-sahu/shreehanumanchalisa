@@ -886,3 +886,20 @@ footer a:hover,
         line-height: 1.8;
     }
 }
+
+
+/* Center Hanuman Chalisa on main page */
+#chalisa {
+    text-align: center;
+}
+
+#chalisa .chalisa,
+#chalisa .chalisa-text,
+#chalisa p {
+    text-align: center;
+}
+
+#chalisa h2,
+#chalisa h3 {
+    text-align: center;
+}
